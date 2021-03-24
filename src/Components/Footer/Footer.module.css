@@ -1,0 +1,18 @@
+.footer {
+    grid-area: f;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 30px;
+  }
+
+.logo img  {
+    width: 350px;
+}

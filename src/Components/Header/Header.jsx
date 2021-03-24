@@ -5,7 +5,7 @@ function Header() {
     return (
 
         <header className={s.header}>
-            <img src="https://png.pngtree.com/element_pic/00/16/07/115783931601b5c.jpg" alt=""/>
+            <img src="https://png.pngtree.com/png-clipart/20200722/original/pngtree-retro-or-vintage-motorcycle-emblem-logo-design-png-image_4985539.jpg" alt=""/>
     
         </header>
     )

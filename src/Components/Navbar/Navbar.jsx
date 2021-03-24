@@ -17,11 +17,14 @@ function Navbar() {
           <a>Contact</a>
         </div>
 
-        <form action="">
-          <input type="text" placeholder="Введите e-mail"/>
-          <input type="password" placeholder="Введите пароль"/>
-          <a href="#">Забыли пароль?</a>
-          <a href="#">Регистрация</a>
+        <form className={s.form} action="#">
+          <h1>Авторизация</h1>
+          <input className={s.input} type="text" placeholder="Введите e-mail"/>
+          <input className={s.input} type="password" placeholder="Введите пароль"/>
+          <div className={s.link}>
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Регистрация</a>
+          </div>
           <button>Авторизация</button>
 
         </form>
