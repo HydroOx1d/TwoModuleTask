@@ -11,14 +11,20 @@ function Navbar() {
           <a href="/dialogs">News</a>
         </div>
         <div className={s.item}>
-          <a>news</a>
+          <a>Add</a>
         </div>
         <div className={s.item}>
-          <a>music</a>
+          <a>Contact</a>
         </div>
-        <div className={s.item}>
-          <a>settings</a>
-        </div>
+
+        <form action="">
+          <input type="text" placeholder="Введите e-mail"/>
+          <input type="password" placeholder="Введите пароль"/>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Регистрация</a>
+          <button>Авторизация</button>
+
+        </form>
       </nav>
     );
 }
