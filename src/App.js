@@ -3,6 +3,7 @@ import React from 'react'
 import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
 import Profile from './Components/Profile/Profile';
+import Add from './Components/Add/Add';
 import News from './Components/News/News';
 import Footer from './Components/Footer/Footer';
 import { Route } from 'react-router';
@@ -18,6 +19,7 @@ function App() {
         <div className="app-wrapper-content">
           <Route path="/profile" component={Profile}/>
           <Route path="/news" component={News}/>
+          <Route path="/add" component={Add}/>
         </div>
         <Footer/>
       </div>

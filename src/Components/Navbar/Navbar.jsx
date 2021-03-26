@@ -12,7 +12,7 @@ function Navbar() {
           <NavLink to="/news" activeClassName={s.active}>News</NavLink>
         </div>
         <div className={s.item}>
-          <a>Add</a>
+          <NavLink to="/add" activeClassName={s.active}>Add</NavLink>
         </div>
         <div className={s.item}>
           <a>Contact</a>
@@ -20,7 +20,7 @@ function Navbar() {
 
         <form className={s.form} action="#">
           <h1>Авторизация</h1>
-          <input className={s.input} type="text" placeholder="Введите e-mail"/>
+          <input className={s.input} type="email" placeholder="Введите e-mail"/>
           <input className={s.input} type="password" placeholder="Введите пароль"/>
           <div className={s.link}>
             <a href="#">Забыли пароль?</a>
