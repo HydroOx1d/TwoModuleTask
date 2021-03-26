@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./Footer.module.css";
+import {NavLink} from 'react-router-dom'
 
 function Footer() {
   return (
@@ -8,10 +9,10 @@ function Footer() {
         <h1>Навигация</h1>
         <ul>
           <div className={s.item}>
-            <a href="/profile">Main</a>
+            <NavLink to="/profile">Main</NavLink>
           </div>
           <div className={s.item}>
-            <a href="/dialogs">News</a>
+            <NavLink to="/news">News</NavLink>
           </div>
           <div className={s.item}>
             <a>Add</a>

@@ -1,13 +1,14 @@
 import React from 'react';
 import MyPosts from './MyPosts/MyPosts';
 import s from './Profile.module.css'
+import Banner from './img/profileBanner.jpg'
 
 function Profile() {
     return (
       <div>
         <div className={s.image}>
           <img
-            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-motorcycles-index2-1614285300.jpg?crop=0.984xw:0.984xh;0,0&resize=1200:*"
+            src={Banner}
             alt=""
           />
         </div>

@@ -1,14 +1,15 @@
 import React from 'react';
 import s from './Navbar.module.css';
+import {NavLink} from 'react-router-dom'
 
 function Navbar() {
     return (
       <nav className={s.nav}>
         <div className={s.item}>
-          <a href="/profile">Main</a>
+          <NavLink to="/profile" activeClassName={s.active}>Main</NavLink>
         </div>
         <div className={s.item}>
-          <a href="/dialogs">News</a>
+          <NavLink to="/news" activeClassName={s.active}>News</NavLink>
         </div>
         <div className={s.item}>
           <a>Add</a>
