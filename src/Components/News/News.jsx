@@ -1,9 +1,22 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import s from './News.module.css'
 import NewsPost from './NewsPost/NewsPost'
 import Kawasaki from './img/z1000.jpg'
+import axios from '../../axios'
 
 function News() {
+    const [posts, setPosts] = useState([])
+    useEffect(() => {
+        axios.get('/news.json').then((response) => {
+            let posts = Object.keys(response.data).map(key => {
+                return {
+                    ...response.data[key],
+                    id: key
+                }
+            })
+            setPosts(posts);
+        })
+    }, [])
     return (
         <div>
             <h1 className={s.title}>Главные новости</h1>
