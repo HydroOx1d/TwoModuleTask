@@ -1,12 +1,12 @@
 .item {
   display: flex;
   margin: 40px;
-  padding: 20px;
+  
+  background-color: rgba(221, 219, 219, 0.486);
 }
 
 .text {
   padding-left: 50px;
-  background-color: rgba(221, 219, 219, 0.486);
 }
 
 .link {
@@ -23,6 +23,5 @@
 }
 
 .image {
-    width: 350px;
-    height: 250px;
+    width: 250px;
 }

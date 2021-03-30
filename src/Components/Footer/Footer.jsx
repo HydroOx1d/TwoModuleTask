@@ -9,7 +9,7 @@ function Footer() {
         <h1>Навигация</h1>
         <ul>
           <div className={s.item}>
-            <NavLink to="/profile">Main</NavLink>
+            <NavLink exact to="/">Main</NavLink>
           </div>
           <div className={s.item}>
             <NavLink to="/news">News</NavLink>
@@ -18,7 +18,7 @@ function Footer() {
             <NavLink to="/add">Add</NavLink>
           </div>
           <div className={s.item}>
-            <a>Contact</a>
+            <NavLink to="/contact">Contact</NavLink>
           </div>
         </ul>
       </nav>

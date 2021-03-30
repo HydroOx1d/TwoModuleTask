@@ -6,7 +6,7 @@ function Navbar() {
     return (
       <nav className={s.nav}>
         <div className={s.item}>
-          <NavLink to="/profile" activeClassName={s.active}>Main</NavLink>
+          <NavLink exact to="/" activeClassName={s.active}>Main</NavLink>
         </div>
         <div className={s.item}>
           <NavLink to="/news" activeClassName={s.active}>News</NavLink>
@@ -15,7 +15,7 @@ function Navbar() {
           <NavLink to="/add" activeClassName={s.active}>Add</NavLink>
         </div>
         <div className={s.item}>
-          <a>Contact</a>
+          <NavLink to="/contact" activeClassName={s.active}>Contact</NavLink>
         </div>
 
         <form className={s.form} action="#">
