@@ -5,10 +5,10 @@ import Kawasaki from './img/z1000.jpg'
 import axios from '../../axios'
 
 function News() {
-    const [posts, setPosts] = useState([])
+    const [posts, setPosts] = useState([]);
+    const [loading, setloading] = useState(true);
     useEffect(() => {
         axios.get('/news.json').then((response) => {
-            console.log(response);
             let posts = Object.keys(response.data).map(key => {
                 return {
                     ...response.data[key],
@@ -16,14 +16,19 @@ function News() {
                 }
             })
             setPosts(posts);
+            setloading(false);
         })
     }, [])
     return (
         <div>
             <h1 className={s.title}>Главные новости</h1>
-            <NewsPost image={Kawasaki} title={posts.data} message="Производитель премиальных электрических мотоциклов Energica идёт в ногу со временем и работает над голосовым интерфейсом между райдером и мотоциклом. Проект осуществляется в сотрудничестве с крупным производителем аксессуаров для смартфонов Cellularline и телекоммуникационной компанией Alascom, и искусственный интеллект, разработанный для мотоциклов Energica, может быть впоследствии внедрён и в другие электрические мотоциклы"/>
-            <NewsPost image={Kawasaki} message="Производитель премиальных электрических мотоциклов Energica идёт в ногу со временем и работает над голосовым интерфейсом между райдером и мотоциклом. Проект осуществляется в сотрудничестве с крупным производителем аксессуаров для смартфонов Cellularline и телекоммуникационной компанией Alascom, и искусственный интеллект, разработанный для мотоциклов Energica, может быть впоследствии внедрён и в другие электрические мотоциклы"/>
-            <NewsPost image={Kawasaki} message="Производитель премиальных электрических мотоциклов Energica идёт в ногу со временем и работает над голосовым интерфейсом между райдером и мотоциклом. Проект осуществляется в сотрудничестве с крупным производителем аксессуаров для смартфонов Cellularline и телекоммуникационной компанией Alascom, и искусственный интеллект, разработанный для мотоциклов Energica, может быть впоследствии внедрён и в другие электрические мотоциклы"/>
+            
+            {
+                loading ? "Loading...." :
+                posts.map(post => {
+                    return <NewsPost key={post.id} image={post.url} title={post.title} message={post.body}/>
+                })
+            }
         </div>
     )
 }

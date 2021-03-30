@@ -16,7 +16,7 @@ function Footer() {
           </div>
           <div className={s.item}>
             <NavLink to="/add">Add</NavLink>
-          </div>
+          </div>  
           <div className={s.item}>
             <NavLink to="/contact">Contact</NavLink>
           </div>
