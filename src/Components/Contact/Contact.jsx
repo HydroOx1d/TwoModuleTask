@@ -6,7 +6,9 @@ function Contact() {
         <div>
             <div>
                 <h1>Контакты</h1>
-                <form className action="#"></form>
+                <form className={s.form} action="#">
+                    
+                </form>
             </div>
         </div>
     )

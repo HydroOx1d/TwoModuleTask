@@ -3,6 +3,7 @@
   grid-area: n;
   border: solid 1px #000;
   background-color: #fff;
+  height: 100%;
 }
 
 .item {
