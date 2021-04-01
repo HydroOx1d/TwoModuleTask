@@ -9,8 +9,6 @@ function Navbar() {
     email: "",
     pass: "",
   });
-
-  
   
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -82,14 +80,14 @@ function Navbar() {
 
   if(user) {
     form = (
-      <div>
+      <div className={s.auth-form}>
         <h1>Вход выполнен</h1>
         <button onClick={onLogout}>Выйти</button>
+        <div>Пользователь: {authData.email}</div>
       </div>
     )
   }
-
-
+  
   return (
     <div>
       <nav className={s.nav}>
