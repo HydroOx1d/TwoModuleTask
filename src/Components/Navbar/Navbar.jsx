@@ -9,7 +9,7 @@ function Navbar() {
     email: "",
     pass: "",
   });
-  
+
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
@@ -52,45 +52,62 @@ function Navbar() {
   };
 
   let form = (
-      <form className={s.form} action="#" onSubmit={submitHandler}>
-        <h1>Авторизация</h1>
-        <input
-          className={s.input}
-          type="email"
-          name="email"
-          placeholder="Введите e-mail"
-          onChange={changeHandler}
-        />
-        <input
-          className={s.input}
-          type="password"
-          name="pass"
-          placeholder="Введите пароль"
-          onChange={changeHandler}
-        />
-        <div className={s.link}>
-          <a href="#">Забыли пароль?</a>
-          <a href="#">Регистрация</a>
-        </div>
-        <div>
-          <button>Авторизация</button>
-        </div>
-      </form>
-  )
+    <form className={s.form} action="#" onSubmit={submitHandler}>
+      <h1>Авторизация</h1>
+      <input
+        className={s.input}
+        type="email"
+        name="email"
+        placeholder="Введите e-mail"
+        onChange={changeHandler}
+      />
+      <input
+        className={s.input}
+        type="password"
+        name="pass"
+        placeholder="Введите пароль"
+        onChange={changeHandler}
+      />
+      <div className={s.link}>
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Регистрация</a>
+      </div>
+      <div>
+        <button>Авторизация</button>
+      </div>
+    </form>
+  );
 
-  if(user) {
+  let navLink = (
+    <>
+      <div className={s.item}>
+        <NavLink exact to="/" activeClassName={s.active}>
+          Main
+        </NavLink>
+      </div>
+      <div className={s.item}>
+        <NavLink to="/news" activeClassName={s.active}>
+          News
+        </NavLink>
+      </div>
+      <div className={s.item}>
+        <NavLink to="/contact" activeClassName={s.active}>
+          Contact
+        </NavLink>
+      </div>
+    </>
+  );
+
+  if (user) {
     form = (
-      <div className={s.auth-form}>
+      <div className={s.auth - form}>
         <h1>Вход выполнен</h1>
         <button onClick={onLogout}>Выйти</button>
         <div>Пользователь: {authData.email}</div>
       </div>
-    )
-  }
-  
-  return (
-    <div>
-      <nav className={s.nav}>
+    );
+    navLink = (
+      <div>
         <div className={s.item}>
           <NavLink exact to="/" activeClassName={s.active}>
             Main
@@ -111,11 +128,16 @@ function Navbar() {
             Contact
           </NavLink>
         </div>
-        <div>
-          {form}
-        </div>
-      </nav>
+      </div>
+    );
+  }
 
+  return (
+    <div>
+      <nav className={s.nav}>
+        <div>{navLink}</div>
+        <div>{form}</div>
+      </nav>
     </div>
   );
 }
