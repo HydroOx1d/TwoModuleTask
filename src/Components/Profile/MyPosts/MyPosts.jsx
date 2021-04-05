@@ -4,6 +4,7 @@ import Post from './Post/Post';
 import YamahaR7 from '../img/yamahar7.jpeg'
 import Harley from '../img/harley.jpeg'
 import GoldWing from '../img/GoldWing.jpeg'
+import { NavLink } from 'react-router-dom'
 
 function MyPosts() {
     return (
@@ -15,7 +16,7 @@ function MyPosts() {
 
             <Post image={GoldWing} message="В 2018 году Gold Wing был полностью пересмотрен и стал намного легче, изящнее и маневреннее, сохранив при этом впечатляющий крутящий момент, обеспечиваемый шестицилиндровым двигателем объемом 1833 куб. см. А ряд новых функций, включая опциональную 7-ступенчатую коробку передач с двойным сцеплением, позволили Gold Wing закрепить репутацию технологического лидера на рынке."/>
           </div>
-          <button className={s.btn}>Больше</button>
+          <NavLink to="/news" className={s.btn}>Больше</NavLink>
         </div>
     );
 }

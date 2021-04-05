@@ -82,17 +82,17 @@ function Navbar() {
     <>
       <div className={s.item}>
         <NavLink exact to="/" activeClassName={s.active}>
-          Main
+          Главное
         </NavLink>
       </div>
       <div className={s.item}>
         <NavLink to="/news" activeClassName={s.active}>
-          News
+          Новости
         </NavLink>
       </div>
       <div className={s.item}>
         <NavLink to="/contact" activeClassName={s.active}>
-          Contact
+          Контакты
         </NavLink>
       </div>
     </>
@@ -110,22 +110,22 @@ function Navbar() {
       <div>
         <div className={s.item}>
           <NavLink exact to="/" activeClassName={s.active}>
-            Main
+            Главное
           </NavLink>
         </div>
         <div className={s.item}>
           <NavLink to="/news" activeClassName={s.active}>
-            News
+            Новости
           </NavLink>
         </div>
         <div className={s.item}>
           <NavLink to="/add" activeClassName={s.active}>
-            Add
+            Добавить
           </NavLink>
         </div>
         <div className={s.item}>
           <NavLink to="/contact" activeClassName={s.active}>
-            Contact
+            Контакты
           </NavLink>
         </div>
       </div>

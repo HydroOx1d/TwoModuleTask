@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Footer.module.css";
 import {NavLink} from 'react-router-dom'
+import { FaInstagram, FaGithub, FaTwitter, FaFacebook, FaVk, FaLinkedin, FaLink } from 'react-icons/fa'
 
 function Footer() {
   return (
@@ -22,6 +23,26 @@ function Footer() {
 
       <div className={s.socials}>
         <h1>Соц. сети</h1>
+        <ul className={s.item__footer}>
+          <li className={s.link}>
+            <a href="#"> <FaInstagram/> </a>
+          </li>
+          <li className={s.link}>
+            <a href="#"> <FaGithub/> </a>
+          </li>
+          <li className={s.link}>
+            <a href="#"> <FaTwitter/> </a>
+          </li>
+          <li className={s.link}>
+            <a href="#"> <FaFacebook/> </a>
+          </li>
+          <li className={s.link}>
+            <a href="#"> <FaVk/> </a>
+          </li>
+          <li className={s.link}>
+            <a href="#"> <FaLinkedin/> </a>
+          </li>
+        </ul>
       </div>
 
       <div className={s.logo}>
